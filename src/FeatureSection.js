@@ -1,4 +1,3 @@
-import images from "./images";
 const FeatureSection = () => {
   return (
     <section className="grid grid-cols-3 sec-1 gap-6 p-10">

@@ -5,18 +5,20 @@ const Header = () => {
 
         <h1 className="text-xl font-bold">Carrot</h1>
         <nav className="space-x-4">
-         <a href="#" className="text-black">
+         <ul>
+          <li><a href="/" className="text-black">
             Product
-          </a>
-          <a href="#" className="text-black">
+          </a></li>
+          <li><a href="/" className="text-black">
             Our Why
-          </a>
-          <a href="#" className="text-black">
+          </a></li>
+           <li><a href="/" className="text-black">
             About Us
-          </a>
-          <a href="#" className="text-black">
-          Contact
-          </a>
+            </a></li>
+            <li><a href="/" className="text-black">
+             Contact
+            </a></li>
+        </ul>
         </nav>
       </div>
     </header>

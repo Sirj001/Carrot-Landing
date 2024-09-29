@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="bg-orange-400 text-white p-10">
       <div className="m-12">
-        <img src="./images/lots.jpg.png"></img>
+        <img src="./images/lots.jpg.png" atl=""></img>
       </div>
 
       <div className="grid grid-cols-2 gap-10 top-10">
@@ -28,7 +28,7 @@ const Footer = () => {
 
       <section className="mb-11 border">
         <p className="text-xs mb-13 text-black">Selected clients</p>
-        <img src="./images/logos.jpg.png"></img>
+        <img src="./images/logos.jpg.png" atl=""></img>
       </section>
 
       <div className="border mb-14 ">

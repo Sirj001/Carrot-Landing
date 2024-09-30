@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
     <footer className="bg-orange-400 text-white p-10">
-      <div className="m-12">
+      <div className="md:m-12">
         <img src="./images/lots.jpg.png" alt=""></img>
       </div>
 
-      <div className="grid grid-cols-2 gap-10 top-10">
+      <div className="grid md:grid-cols-2 gap-10 top-10">
         <h1 className="text-black text-3xl">Turning waste into value</h1>
 
         <p className="text-black text-xs mb-10">

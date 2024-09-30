@@ -3,7 +3,7 @@
 
 const MainSection = () => {
   return (
-    <main className=" grid grid-cols-2 main-6 p-10 flex justify-between items-center">
+    <main className=" md:grid grid-cols-2 main-6 p-10 flex md:justify-between items-center">
       <div className="max-w-lg">
         <h2 className="text-4xl font-bold mb-4">
           Creating a world of circular materials.

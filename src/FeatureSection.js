@@ -1,6 +1,6 @@
 const FeatureSection = () => {
   return (
-    <section className="grid grid-cols-3 sec-1 gap-6 p-10">
+    <section className="md:grid grid-cols-3 sec-1 gap-1 p-10">
       <div className="text-blacke p-4">
         <img className="img" src="./images/cup.jpg.jpeg" alt=""></img>
         <h2>Create sustained positive change</h2>

@@ -1,55 +1,46 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 
 const Header = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const menu_ref = useRef();
 
-  const toggleNavbar = (event) => {
+  const toggleNavbar = () => {
     setIsNavbarOpen((prev) => !prev);
-    // alert(isNavbarOpen);
-    //alert(window.screenX);
   };
-  function closeNavbar() {
+
+  const closeNavbar = () => {
     setIsNavbarOpen(false);
-    if (menu_ref.current) {
-      menu_ref.current.style.display = "block";
-    }
-  }
-  useEffect(() => {
-    if (isNavbarOpen) {
-      if (menu_ref.current) {
-        menu_ref.current.style.display = "none";
-      }
-    }
-  }, [isNavbarOpen]);
+  };
 
   return (
     <header>
       <div className="nav-6 p-4 flex justify-between items-center border">
         <div className="container flex justify-between items-center mx-auto">
           <h1 className="text-xl font-bold">Carrot</h1>
-          <button
-            ref={menu_ref}
-            aria-label="Toggle Navigation"
-            aria-expanded={isNavbarOpen}
-            className="lg:hidden inline-flex items-center justify-center text-black border h-10 w-10 rounded-md focus:outline-none"
-            onClick={toggleNavbar}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-6"
+          {!isNavbarOpen 
+           && (
+            <button
+              aria-label="Toggle Navigation"
+              aria-expanded={isNavbarOpen}
+              className="lg:hidden inline-flex items-center justify-center text-black border h-10 w-10 rounded-md focus:outline-none"
+              onClick={toggleNavbar}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+           )
+          }
         </div>
         <nav
           className={`w-full mt-2 lg:mt-0 transition-all duration-300 ${
@@ -74,6 +65,7 @@ const Header = () => {
                 <a
                   href="#"
                   className="flex px-4 py-2 rounded-md font-medium text-black hover:bg-black hover:text-white"
+                  onClick={closeNavbar} // Close navbar on link click
                 >
                   {item}
                 </a>

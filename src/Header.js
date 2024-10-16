@@ -47,7 +47,7 @@ const Header = () => {
             isNavbarOpen ? "block" : "hidden"
           } lg:flex lg:justify-end lg:items-center`}
         >
-          <span
+          <span className="lg:hidden"
             style={{
               color: "red",
               filter: "drop-shadow(2px 1px 2px rgba(12,12,1,0.6))",
